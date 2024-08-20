@@ -1,8 +1,8 @@
 import React from 'react';
 import { Routes,Route } from 'react-router-dom';
-import Home from '../pages/home/Home';
-import About from '../pages/about/About';
-import Error404 from '../pages/Error/NoPage';
+import Home from '../pages/Home';
+import About from '../pages/About';
+import Error404 from '../pages/NoPage';
 
 const Router = () => {
   return (

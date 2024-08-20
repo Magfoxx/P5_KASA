@@ -1,0 +1,13 @@
+@import '../settings';
+
+.header-content {
+  @include flex-center(row, space-between);
+  width: 1240px;
+
+  margin: 30px auto;
+
+  &__logo {
+    width: 210px;
+    height: 68px;
+  }
+}

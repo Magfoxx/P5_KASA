@@ -1,13 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-/*importer le scss quand il sera fait ici */
+import { NavLink } from 'react-router-dom';
+import '../../assets/styles/components/_nav.scss';
 
 function Nav() {
   return (
-    <nav>
-      <ul>
-        <li><Link to="/">Accueil</Link></li>
-        <li><Link to="/about">À propos</Link></li>
+    <nav className='navbar'>
+      <ul className='navbar__ul'>
+        <li className='navbar__list'>
+          <NavLink 
+          to="/" 
+          className={({ isActive }) => isActive ? "navbar__link active" : "navbar__link"}
+          >
+            Accueil
+          </NavLink>
+        </li>
+        <li className='navbar__list'>
+          <NavLink
+          to="/about"
+          className={({ isActive }) => isActive ? "navbar__link active" : "navbar__link"}
+          >
+            A Propos
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

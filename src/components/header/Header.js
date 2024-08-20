@@ -1,12 +1,12 @@
 import React from 'react';
 import logo from '../../assets/images/logo/LOGO.svg';
 import Nav from '../nav/Nav';
-/*importer le scss quand il sera fait ici */
+import '../../assets/styles/layout/_header.scss'
 
 function Header() {
   return (
-    <header>
-      <img src={ logo } alt='Logo Kasa' />
+    <header className='header-content'> 
+      <img className='header-logo' src={ logo } alt='Logo Kasa' />
       <Nav />
     </header>
   );

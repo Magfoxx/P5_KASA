@@ -1,11 +1,14 @@
 import React from 'react';
-/* importer le scss ici quand il sera fait */
+import '../../assets/styles/components/_banner.scss';
 
-function Banner({ imageUrl, altText, title }) {
+function Banner({ imageUrl, altText, title, isDarkened = true}) {
   return (
     <div className='banner'>
-      <img src={imageUrl} alt={altText} className='banner-image' />
-      <h1 className='banner-text'>{title}</h1>
+        <img
+          src={imageUrl} 
+          alt={altText} 
+          className={`banner__image ${isDarkened ? 'banner__image--darkened' : ''}`} />
+          <h1 className='banner__text'>{title}</h1>
     </div>
   );
 };

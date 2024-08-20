@@ -1,0 +1,14 @@
+@import '../settings';
+
+.footer {
+  @include flex-center(column);
+  
+  background-color: $secondary-color;
+  color: $primary-color;
+  width: 100%;
+  height: 209px;
+
+  &__logo {
+    padding: 60px;
+  }
+}
