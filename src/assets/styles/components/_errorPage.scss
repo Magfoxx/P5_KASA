@@ -1,0 +1,25 @@
+@import "../settings";
+
+.error {
+  @include flex-center(column);
+  padding: 30px;
+
+  &__logo {
+    width: 597px;
+    height: 263px;
+    margin: 95px;
+  }
+
+  &__message {
+    color: $tertiary-color;
+    font-size: 36px;
+    font-weight: 500;
+    @include margin-error;
+  }
+
+  .back-home-link {
+    font-size: 18px;
+    text-decoration: underline;
+    @include margin-error;
+  }
+}

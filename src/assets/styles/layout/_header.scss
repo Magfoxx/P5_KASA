@@ -1,9 +1,8 @@
 @import '../settings';
 
-.header-content {
+.header {
   @include flex-center(row, space-between);
   width: 1240px;
-
   margin: 30px auto;
 
   &__logo {

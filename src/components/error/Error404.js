@@ -1,13 +1,15 @@
 import React from 'react';
-/* importer le scss quand il sera fait ici */
+
+import imgError from '../../assets/images/error/404.png';
+import '../../assets/styles/components/_errorPage.scss';
 
 function Error404() {
   return (
-      <main className='error-content'>
-        <h1 className='error-code'>404</h1>
-        <p className='error-message'>Oups! La page que vous demandez n'existe pas.</p>
+      <div className='error'>
+        <img className='error__logo' src={ imgError } alt='Logo erreur 404'/>
+        <p className='error__message'>Oups! La page que vous demandez n'existe pas.</p>
         <a href='/' className='back-home-link'>Retourner sur la page d'accueil</a>
-      </main>
+      </div>
   );
 };
 

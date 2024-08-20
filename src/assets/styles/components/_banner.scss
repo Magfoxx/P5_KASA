@@ -18,7 +18,7 @@
   &__text {
     position: absolute;
     @include flex-center;
-    color: white;
+    color: $primary-color;
     text-align: center;
     font-size: 48px;
     font-weight: 700;

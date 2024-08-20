@@ -6,3 +6,8 @@
   align-items: $align;
   margin: 0 auto;
 }
+
+// Marges
+@mixin margin-error{
+  margin-bottom: 95px;
+}

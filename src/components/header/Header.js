@@ -5,8 +5,8 @@ import '../../assets/styles/layout/_header.scss'
 
 function Header() {
   return (
-    <header className='header-content'> 
-      <img className='header-logo' src={ logo } alt='Logo Kasa' />
+    <header className='header'> 
+      <img className='header__logo' src={ logo } alt='Logo Kasa' />
       <Nav />
     </header>
   );
