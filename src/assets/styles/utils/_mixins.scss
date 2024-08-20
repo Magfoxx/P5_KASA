@@ -7,6 +7,19 @@
   margin: 0 auto;
 }
 
+// Font
+@mixin primary-font($align: center){
+  font-size: 18px;
+  font-weight: 700;
+  text-align: $align;
+}
+
+@mixin secondary-font($align: center){
+  font-size: 24px;
+  font-weight: 500;
+  text-align: $align;
+}
+
 // Marges
 @mixin margin-error{
   margin-bottom: 95px;

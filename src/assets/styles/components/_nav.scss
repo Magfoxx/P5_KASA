@@ -14,7 +14,7 @@
     
     & .navbar__link {
       margin-left: 30px;
-      font-size: 24px;
+      @include secondary-font;
 
       
       &.active {

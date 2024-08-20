@@ -1,0 +1,17 @@
+@import '../settings';
+
+.gallery {
+  width: 1240px;
+  background-color: $quaternary-color;
+  border-radius: 25px;
+  margin: 50px auto;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    padding: 50px;
+    gap: 50px;
+  }
+
+}
