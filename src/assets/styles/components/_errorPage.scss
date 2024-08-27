@@ -3,6 +3,7 @@
 .error {
   @include flex-center(column);
   padding: 30px;
+  height: 85vh;
 
   &__logo {
     width: 597px;

@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../components/header/Header';
-import Footer from '../components/footer/Footer';
-import Banner from '../components/banner/Banner';
-import Collapse from '../components/collapse/Collapse';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Banner from '../components/Banner';
+import Collapse from '../components/Collapse';
 import aboutImage from '../assets/images/banner/bannerAbout.webp';
 
 
@@ -15,7 +15,7 @@ function About() {
         altText="Paysage montagneux"
         isDarkened={false} />
       <div className='about-content'>
-        <Collapse title="fiabilité">
+        <Collapse title="Fiabilité">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula, est sed dignissim vestibulum, dolor neque ultrices nulla, auctor congue neque dui eget odio. Aenean sed dui vestibulum erat fermentum tempus ac pretium felis. Ut vulputate nisi in cursus faucibus. Suspendisse id ante congue, elementum risus et, suscipit velit. Nunc.</p>
         </Collapse>
         <Collapse title="Respect">

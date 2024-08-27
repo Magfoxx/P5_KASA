@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../components/header/Header';
-import Footer from '../components/footer/Footer';
-import Error404 from '../components/error/Error404';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Error404 from '../components/Error404';
 
 function NoPage() {
   return (

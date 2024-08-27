@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../assets/styles/components/_banner.scss';
+import '../assets/styles/components/_banner.scss';
 
 function Banner({ imageUrl, altText, title, isDarkened = true}) {
   return (

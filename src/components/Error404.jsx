@@ -1,7 +1,7 @@
 import React from 'react';
 
-import imgError from '../../assets/images/error/404.png';
-import '../../assets/styles/components/_errorPage.scss';
+import imgError from '../assets/images/error/404.png';
+import '../assets/styles/components/_errorPage.scss';
 
 function Error404() {
   return (

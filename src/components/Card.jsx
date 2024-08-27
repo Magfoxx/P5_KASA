@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../assets/styles/components/_card.scss';
+import '../assets/styles/components/_card.scss';
 
 function Card({ title, cover }) {
   return (
