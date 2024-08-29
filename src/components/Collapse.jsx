@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import '../assets/styles/components/collapse.scss';
-import Arrow from '../assets/images/carrousel/Arrow.png';
+import Arrow from '../assets/images/arrow/Arrow.png';
+import '../assets/styles/components/_collapse.scss';
 
 function Collapse({ title, children }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,10 +25,5 @@ function Collapse({ title, children }) {
     </div>
   );
 }
-
-Collapse.propTypes = {
-  title: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
-};
 
 export default Collapse;

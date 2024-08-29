@@ -1,0 +1,56 @@
+@import '../settings';
+
+.carousel {
+ @include flex-center;
+ position: relative;
+
+  &__button {
+    width: 48.68px;
+    height: 79.2px;
+    transform: scale(1);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+    &-left {
+      rotate: 180deg;
+      position: absolute;
+      left: 23.36px;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.2s ease-in-out;
+      }
+    }
+
+    &-right {
+      position: absolute;
+      right: 23.36px;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+
+  &__image-container {
+    width: 1240px;
+    height: 415px;
+  }
+  
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: -60px;
+    color: $primary-color;
+    font-size: 18px;
+    width: 100px;
+    height: 100px;
+  }
+}

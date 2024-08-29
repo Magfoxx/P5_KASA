@@ -39,7 +39,7 @@
     margin-top: -5px;
     height: 0;
     overflow: hidden;
-    transition: height 0.3s ease-out, padding 0.5s;
+    transition: max-height 0.3s ease-out, padding 0.5s ease-out;
 
     p {
       text-align: left;
