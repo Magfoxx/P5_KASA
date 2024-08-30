@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import Vector from '../assets/images/arrow/vector.png';
 import "../assets/styles/components/_carousel.scss"
-import AccommodationDetails from '../pages/AccommodationDetails';
 
-const Carousel = ({ pictures }) => {
+const SlideShow = ({ pictures }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToPrevious = () => {
@@ -18,11 +17,13 @@ const Carousel = ({ pictures }) => {
 
   return (
     <div className="carousel">
-      <img
-        src={Vector}
-        onClick={goToPrevious}
-        className="carousel__button carousel__button-left">
-      </img>
+      {pictures.length > 1 && (
+        <img
+          src={Vector}
+          onClick={goToPrevious}
+          className="carousel__button carousel__button-left">
+        </img>
+      )}
 
       <div className="carousel__image-container">
         <img
@@ -32,12 +33,13 @@ const Carousel = ({ pictures }) => {
         />
       </div>
 
-      <img
-        src={Vector}
-        onClick={goToNext}
-        className="carousel__button carousel__button-right">
-      </img>
-
+      {pictures.length > 1 && (
+        <img
+          src={Vector}
+          onClick={goToNext}
+          className="carousel__button carousel__button-right">
+        </img>
+      )}
       <div className="carousel__pagination">
         {currentIndex + 1}/{pictures.length}
       </div>
@@ -46,4 +48,4 @@ const Carousel = ({ pictures }) => {
 };
 
 
-export default Carousel;
+export default SlideShow;

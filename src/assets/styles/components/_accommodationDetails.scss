@@ -80,3 +80,19 @@
   min-width: 115px;
 }
 
+.collapse-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 20px auto;
+  gap: 20px;    
+}
+
+.collapse li {
+  text-align: left;
+}
+
+.collapse-section .collapse {
+  flex: 1; /* Pour que les collapse soit de largeur égale */
+  min-width: 0;
+}

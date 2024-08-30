@@ -2,7 +2,6 @@
 
 .collapse {
   width: 1024px;
-  margin: 10px 0;
   margin: 30px auto;
 
   &__header {
@@ -45,10 +44,13 @@
       text-align: left;
       margin: 0;
     }
-
+    
     &.open {
-      padding: 15px;
+      padding: 20px;
       height: auto; 
+      line-height: 25.67px;
+      font-size: 18px;
+      font-weight: 400;
     }
   }
 }

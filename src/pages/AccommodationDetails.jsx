@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import Collapse from "../components/Collapse";
-import Carousel from "../components/Caroussel";
 import accommodationData from "../data/accommodations.json";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Slideshow from "../components/Slideshow";
 import Rating from "../components/Rating";
-import NoPage from "../pages/NoPage";
+import Collapse from "../components/Collapse";
+import Footer from "../components/Footer";
 
-import accommodationDetails from "../assets/styles/components/_accommodationDetails.scss";
+//style
+import "../assets/styles/components/_accommodationDetails.scss";
 
 function AccommodationDetails() {
   const { id } = useParams();
@@ -33,7 +33,7 @@ function AccommodationDetails() {
       <Header />
       <main>
         <div className="gallery">
-          <Carousel pictures={accommodation.pictures} />
+          <Slideshow pictures={accommodation.pictures} />
         </div>
 
         <div className="infos-host-container">
