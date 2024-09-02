@@ -3,12 +3,12 @@
   margin: 0;
   text-align: center;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: $font-family-base;
 }
 
 main {
-  width: 1240px;
-  margin: auto;
+  width: $main-width;
+  @include margin-auto;
 }
 
 ul {

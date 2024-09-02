@@ -1,15 +1,15 @@
 @import '../settings';
 
 .carousel {
- @include flex-center;
- position: relative;
+  @include flex-center;
+  position: relative;
 
   &__button {
-    width: 48.68px;
-    height: 79.2px;
+    width: $carousel-button-width;
+    height: $carousel-button-height;
     transform: scale(1);
     cursor: pointer;
-    transition: 0.2s ease-in-out;
+    @include transition;
 
     &-left {
       rotate: 180deg;
@@ -18,7 +18,6 @@
 
       &:hover {
         transform: scale(1.1);
-        transition: 0.2s ease-in-out;
       }
     }
 
@@ -28,13 +27,12 @@
 
       &:hover {
         transform: scale(1.1);
-        transition: 0.2s ease-in-out;
       }
     }
   }
 
   &__image-container {
-    width: 1240px;
+    width: $main-width;
     height: 415px;
   }
   
@@ -42,14 +40,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 25px;
+    @include border-radius($border-radius-large);
   }
 
   &__pagination {
     position: absolute;
     bottom: -60px;
     color: $primary-color;
-    font-size: 18px;
+    font-size: $font-size-base;
     width: 100px;
     height: 100px;
   }

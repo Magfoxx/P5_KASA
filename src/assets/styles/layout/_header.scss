@@ -2,11 +2,7 @@
 
 .header {
   @include flex-center(row, space-between);
-  width: 1240px;
-  margin: 30px auto;
-
-  &__logo {
-    width: 210px;
-    height: 68px;
-  }
+  @include logo-size(211px, 68px);
+  width: $main-width;
+  margin: $margin-vertical auto;
 }

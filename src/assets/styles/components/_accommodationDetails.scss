@@ -1,48 +1,41 @@
 @import "../settings";
 
 .gallery {
-  margin-bottom: 20px;
+  @include margin-bottom($margin-medium);
 }
 
 .infos-host-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-  gap: 20px; 
+  @include flex-center(row, space-between);
+  @include margin-top($margin-medium);
+  gap: $gap-medium; 
 }
 
 .infos {
-  
   &__title {
     color: $tertiary-color;
     font-weight: 500;
     text-align: left;
-    font-size: 36px;
+    font-size: $font-size-large;
   }
 
   &__location {
     text-align: left;
-    font-size: 18px;
-    margin-top: 5px;
+    font-size: $font-size-base;
+    @include margin-top($margin-small);
   }
 }
 
 .host {
-  display: flex;
-  align-items: center;
-  
+  @include flex-center;
+
   &__info {
-    display: flex;
-    align-items: center;
+    @include flex-center;
   }
   
   &__info-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flex-center(column, center, center);
     color: $tertiary-color;
-    font-size: 18px;
+    font-size: $font-size-base;
     margin-right: 10px;
     text-align: right;
     width: 80px;
@@ -50,49 +43,61 @@
   }
   
   &__info-image {
-    border-radius: 50%;
+    @include border-radius(50%);
     width: 64px;
     height: 64px;
   }
 }
 
 .tags-rating {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px 0;
+  @include flex-center(row, space-between);
+  @include margin-top($margin-small);
+  @include margin-bottom($margin-small);
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin: 10px 0;
+  gap: $gap-small;
+  @include margin-top($margin-small);
+  @include margin-bottom($margin-small);
 }
 
 .tag {
   background-color: $tertiary-color;
   color: $primary-color;
-  padding: 5px 10px;
-  border-radius: 25px;
-  font-size: 14px;
+  @include padding(5px 10px);
+  @include border-radius(25px);
+  font-size: $font-size-small;
   display: inline-block;
   min-width: 115px;
 }
 
 .collapse-section {
-  display: flex;
-  justify-content: space-between;
+  @include flex-center(row, space-between);
   width: 100%;
-  margin: 20px auto;
-  gap: 20px;    
-}
+  @include margin-auto;
+  gap: $gap-medium;
+  align-items: stretch; /* Permet aux collapses d'avoir la même hauteur */
 
-.collapse li {
-  text-align: left;
-}
+  .collapse {
+    flex: 1;
+    min-width: 0;
+    flex-grow: 1;
 
-.collapse-section .collapse {
-  flex: 1; /* Pour que les collapse soit de largeur égale */
-  min-width: 0;
+    &__content {
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      background-color: $quaternary-color;
+      @include border-radius(0 0 $border-radius-small $border-radius-small);
+
+      &.open {
+        max-height: 300px; /* Ajustez cette valeur selon le contenu */
+      }
+
+      &.closed {
+        max-height: 0;
+      }
+    }
+  }
 }

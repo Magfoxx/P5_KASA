@@ -10,7 +10,7 @@ function Collapse({ title, children }) {
   };
 
   return (
-    <div className='collapse'>
+<div className={`collapse ${isOpen ? 'open' : 'closed'}`}>
       <div className={`collapse__header ${isOpen ? 'open' : ''}`} onClick={toggleCollapse}>
         <h2>{title}</h2>
         <img
@@ -24,6 +24,6 @@ function Collapse({ title, children }) {
       </div>
     </div>
   );
-}
+};
 
 export default Collapse;

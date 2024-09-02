@@ -1,56 +1,49 @@
-@import '../settings';
+@import "../settings";
 
 .collapse {
-  width: 1024px;
-  margin: 30px auto;
+  width: 1023px;
+  @include margin-collapse;
 
   &__header {
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include border-radius($border-radius-small);
     background-color: $tertiary-color;
-    padding: 10px;
-    border-radius: 5px; 
     color: $primary-color;
-    font-size: 20px;
+    @include padding($padding-small $padding-medium);
+    @include flex-center(row, space-between);
+    cursor: pointer;
+    @include transition(background-color);
 
-    h2 {
-      margin: 0;
+    &.open {
+      background-color: darken($tertiary-color, 10%);
     }
+  }
 
-    img.collapse__icon {
-      width: 32px;
-      height: 32px;
-      transition: transform 0.3s ease;
-    }
+  &__icon {
+    width: $collapse-icon-size;
+    height: $collapse-icon-size;
+    @include transition(transform);
 
-    &.open img.collapse__icon {
-      transform: rotate(180deg); // Rotation de l'icône quand ouverture
-      transition: transform 0.3s ease;
+    &.rotate {
+      transform: rotate(180deg);
     }
   }
 
   &__content {
-    background-color: #f6f6f6; 
-    padding: 0 15px;
-    border-radius: 0 0 5px 5px;
-    margin-top: -5px;
-    height: 0;
+    max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.5s ease-out;
+    padding: 0 $padding-medium;
+    @include transition(max-height, $transition-duration, ease-out);
+    @include transition(padding, $transition-duration, ease-out);
+    background-color: $quaternary-color;
+    @include border-radius(0 0 $border-radius-small $border-radius-small);
 
-    p {
-      text-align: left;
-      margin: 0;
+    & p,li {
+      @include font-base($font-size-base, 400, $secondary-color, left);
     }
-    
+
     &.open {
-      padding: 20px;
-      height: auto; 
-      line-height: 25.67px;
-      font-size: 18px;
-      font-weight: 400;
+      max-height: 300px;
+      padding: $padding-small $padding-medium;
     }
   }
 }

@@ -1,26 +1,23 @@
-@import "../settings";
+@import '../settings';
 
 .error {
   @include flex-center(column);
-  padding: 30px;
-  height: 85vh;
+  @include padding($padding-large);
 
   &__logo {
-    width: 597px;
-    height: 263px;
-    margin: 95px;
+    @include margin-top($margin-large);
   }
 
   &__message {
     color: $tertiary-color;
-    font-size: 36px;
+    font-size: $font-size-large;
     font-weight: 500;
-    @include margin-error;
+    margin: 100px;
   }
 
   .back-home-link {
-    font-size: 18px;
+    font-size: $font-size-base;
     text-decoration: underline;
-    @include margin-error;
+    @include margin-top($margin-medium);
   }
 }

@@ -1,17 +1,16 @@
 @import '../settings';
 
 .footer {
-  @include flex-center(column);
+@include flex-center(column);
   background-color: $secondary-color;
   color: $primary-color;
   width: 100%;
-  height: 209px;
+  height: $footer-height;
+  @include margin-top;
+  padding: 20px;
 
   &__logo {
-    padding: 60px;
-  }
-  
-  &__text-copyright {
-    @include secondary-font;
+    @include logo-size(122px, 40px);
+    @include margin-auto
   }
 }

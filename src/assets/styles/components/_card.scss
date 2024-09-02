@@ -1,9 +1,9 @@
 @import '../settings';
 
 .card {
-  width: 340px;
-  height: 340px;
-  border-radius: 10px;
+  width: $card-size;
+  height: $card-size;
+  @include border-radius($border-radius-medium);
   overflow: hidden;
   position: relative;
   align-items: flex-end;
@@ -28,8 +28,7 @@
   &__title {
     position: absolute;
     bottom: 0;
-    @include primary-font($align:left);
-    color: $primary-color;
-    margin: 10px;
+    @include font-base($align:left, $weight: 700);
+    margin: $margin-small;
   }
 }

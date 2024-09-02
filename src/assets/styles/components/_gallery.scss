@@ -1,17 +1,18 @@
-@import '../settings';
+@import "../settings";
 
 .gallery {
-  width: 1240px;
+  width: $main-width;
   background-color: $quaternary-color;
-  border-radius: 25px;
-  margin: 50px auto;
+  @include border-radius($border-radius-large);
+  @include margin-top($margin-large);
+  @include margin-bottom($margin-large);
 
   &__container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     justify-items: center;
     padding: 50px;
-    gap: 50px;
+    // Assurez-vous que les gap verticaux et horizontaux sont les mêmes
+    gap: $gap-large;
   }
-
 }

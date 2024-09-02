@@ -3,12 +3,14 @@
 .banner {
   position: relative;
   @include flex-center(column);
+  @include margin-top;
+  @include margin-bottom($margin-large);
 
   &__image {
-    width: 1240px;
-    height: 223px;
+    width: $main-width;
+    height: $banner-height;
     object-fit: cover;
-    border-radius: 25px;
+    @include border-radius($border-radius-large);
   }
 
   &__image--darkened {
@@ -17,11 +19,7 @@
 
   &__text {
     position: absolute;
-    @include flex-center;
-    color: $primary-color;
-    text-align: center;
-    font-size: 48px;
-    font-weight: 700;
+    @include title-font(48px, 700, $primary-color);
     z-index: 1;
   }
 }
