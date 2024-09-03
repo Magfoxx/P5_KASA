@@ -1,8 +1,13 @@
 @import "../settings";
 
 .collapse {
-  width: 1023px;
+  max-width: 1023px;
+  width: 100%;
   @include margin-collapse;
+
+  @media (max-width: $breakpoint-mobile) {
+    margin: 0 auto 30px;
+  }
 
   &__header {
     @include border-radius($border-radius-small);
@@ -12,6 +17,15 @@
     @include flex-center(row, space-between);
     cursor: pointer;
     @include transition(background-color);
+    height: 52px;
+
+    @media (max-width: $breakpoint-mobile) {
+      height: 30px;
+    }
+
+    h2 {
+      font-size: $font-size-base;
+    }
 
     &.open {
       background-color: darken($tertiary-color, 10%);
@@ -22,6 +36,11 @@
     width: $collapse-icon-size;
     height: $collapse-icon-size;
     @include transition(transform);
+
+    @media (max-width: $breakpoint-mobile) {
+    width: $collapse-icon-size-mobile;
+    height: $collapse-icon-size-mobile;
+    }
 
     &.rotate {
       transform: rotate(180deg);
@@ -37,8 +56,13 @@
     background-color: $quaternary-color;
     @include border-radius(0 0 $border-radius-small $border-radius-small);
 
-    & p,li {
+    & p,
+    li {
       @include font-base($font-size-base, 400, $secondary-color, left);
+      
+      @media (max-width:$breakpoint-mobile) {
+        @include font-base($font-size-small, 400, $secondary-color);
+      }
     }
 
     &.open {

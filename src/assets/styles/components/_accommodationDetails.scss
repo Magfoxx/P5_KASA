@@ -1,9 +1,5 @@
 @import "../settings";
 
-.gallery {
-  @include margin-bottom($margin-medium);
-}
-
 .infos-host-container {
   @include flex-center(row, space-between);
   @include margin-top($margin-medium);

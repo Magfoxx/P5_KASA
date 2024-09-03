@@ -7,9 +7,12 @@
 }
 
 main {
-  width: $main-width;
-  @include margin-auto;
+@include margin-auto;
+@include flex-center(column);
+margin: $margin-small;
+
 }
+
 
 ul {
   list-style-type: none;

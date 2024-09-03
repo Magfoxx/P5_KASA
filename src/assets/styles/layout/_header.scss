@@ -2,7 +2,19 @@
 
 .header {
   @include flex-center(row, space-between);
-  @include logo-size(211px, 68px);
-  width: $main-width;
-  margin: $margin-vertical auto;
+  max-width: $main-width;
+  margin: 30px auto 50px;
+
+  @media (max-width:$breakpoint-tablet) {
+    margin: 20px;
+  }
+  
+  &__logo {
+    @include logo-size(211px,68px);
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 145px;
+      height: auto;
+    }
+  }
 }
