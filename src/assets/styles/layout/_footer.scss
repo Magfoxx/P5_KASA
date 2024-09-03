@@ -14,7 +14,7 @@
    }  
 
   &__logo {
-    @include logo-size(122px, 40px); // Default size
+    @include logo-size(122px, 40px); // Taille par défaut
     @include margin-auto; 
 
     @media (max-width: $breakpoint-mobile) {

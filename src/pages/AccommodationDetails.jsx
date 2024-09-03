@@ -37,29 +37,32 @@ function AccommodationDetails() {
         </div>
 
         <div className="infos-host-container">
-          <div className="infos">
-            <h1 className="infos__title">{accommodation.title}</h1>
-            <p className="infos__location">{accommodation.location}</p>
+          <div className="infos-host-content">
+            <div className="infos">
+              <h1 className="infos__title">{accommodation.title}</h1>
+              <p className="infos__location">{accommodation.location}</p>
+              <div className="tags">
+                {accommodation.tags.map((tag) => (
+                  <span key={tag} className="tag">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="host__container">
+              <div className="host__info">
+                <p className="host__info-text">{accommodation.host.name}</p>
+                <img
+                  className="host__info-image"
+                  src={accommodation.host.picture}
+                  alt={accommodation.host.name}
+                />
+              </div>
+              <div className="rating">
+                <Rating rating={accommodation.rating} />
+              </div>
+            </div>
           </div>
-          <div className="host__info">
-            <p className="host__info-text">{accommodation.host.name}</p>
-            <img
-              className="host__info-image"
-              src={accommodation.host.picture}
-              alt={accommodation.host.name}
-            />
-          </div>
-        </div>
-
-        <div className="tags-rating">
-          <div className="tags">
-            {accommodation.tags.map((tag) => (
-              <span key={tag} className="tag">
-                {tag}
-              </span>
-            ))}
-          </div>
-            <Rating rating={accommodation.rating} />
         </div>
 
         <div className="collapse-section">

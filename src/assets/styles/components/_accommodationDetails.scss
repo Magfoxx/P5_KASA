@@ -3,7 +3,24 @@
 .infos-host-container {
   @include flex-center(row, space-between);
   @include margin-top($margin-medium);
+  max-width: $main-width;
+  width: 100%;
   gap: $gap-medium; 
+
+  @media (max-width: $breakpoint-mobile) {
+    margin-top: 0;
+  }
+}
+
+.infos-host-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+
+  @media (max-width:$breakpoint-mobile) {
+    display: flex;
+flex-direction: column;
+  }
 }
 
 .infos {
@@ -12,43 +29,79 @@
     font-weight: 500;
     text-align: left;
     font-size: $font-size-large;
+
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: $font-size-base;
+    }
   }
 
   &__location {
     text-align: left;
     font-size: $font-size-base;
     @include margin-top($margin-small);
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 14px;
+    }
   }
 }
 
 .host {
-  @include flex-center;
+  &__container {
+    @include flex-center(column, center, flex-end);
 
+    @media (max-width:$breakpoint-mobile) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
   &__info {
-    @include flex-center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
   
   &__info-text {
-    @include flex-center(column, center, center);
     color: $tertiary-color;
     font-size: $font-size-base;
     margin-right: 10px;
     text-align: right;
     width: 80px;
     height: 52px;
+    padding-top: 5px;
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: $font-size-small;
+      width: 40px;
+      display: flex;
+      align-items: center;
+    }
   }
   
   &__info-image {
     @include border-radius(50%);
     width: 64px;
     height: 64px;
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 32px;
+      height: 32px;
+    }
   }
 }
 
-.tags-rating {
+.rating {
   @include flex-center(row, space-between);
   @include margin-top($margin-small);
   @include margin-bottom($margin-small);
+
+  & img {
+  @media (max-width:$breakpoint-mobile) {
+    width: 18px;
+    height: 18px;
+  }
+}
 }
 
 .tags {
@@ -76,6 +129,11 @@
   gap: $gap-medium;
   align-items: stretch; /* Permet aux collapses d'avoir la même hauteur */
 
+  @media (max-width:$breakpoint-mobile) {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
   .collapse {
     flex: 1;
     min-width: 0;
@@ -88,7 +146,7 @@
       @include border-radius(0 0 $border-radius-small $border-radius-small);
 
       &.open {
-        max-height: 300px; /* Ajustez cette valeur selon le contenu */
+        max-height: 300px;
       }
 
       &.closed {
