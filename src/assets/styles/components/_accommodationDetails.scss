@@ -119,7 +119,14 @@ flex-direction: column;
   @include border-radius(25px);
   font-size: $font-size-small;
   display: inline-block;
-  min-width: 115px;
+  min-width: 115px;  // Largeur minimale
+  max-width: auto;   // Permet à l'élément de s'étendre selon le texte
+  width: auto;       // Laisse la largeur se calculer automatiquement en fonction du contenu
+
+  @media (max-width: $breakpoint-mobile) {
+    min-width: 84px;  // Largeur minimale en mode mobile
+    font-size: 10px;
+  }
 }
 
 .collapse-section {

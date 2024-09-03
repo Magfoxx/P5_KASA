@@ -5,7 +5,13 @@
 @import './layout/header';
 @import './layout/footer';
 
-// importation des styles des composants
+// Importation des styles des composants
+@import './components/errorPage';
 @import './components/nav';
 @import './components/banner';
-@import './components/noPage';
+@import './components/gallery';
+@import './components/card';
+@import './components/ratings';
+@import './components/carousel';
+@import './components/collapse';
+@import './components/accommodationDetails';

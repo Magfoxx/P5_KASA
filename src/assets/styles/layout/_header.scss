@@ -3,7 +3,11 @@
 .header {
   @include flex-center(row, space-between);
   max-width: $main-width;
-  margin: 30px auto 50px;
+  margin: 30px auto;
+
+  @media (max-width: 1240px) {
+    margin: 30px 15px;
+  }
 
   @media (max-width:$breakpoint-tablet) {
     margin: 20px;
