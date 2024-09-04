@@ -23,7 +23,6 @@ function AccommodationDetails() {
     }
   }, [accommodation, navigate]);
 
-  // Suppression du retour null - le reste du composant sera rendu
   return (
     <div className="accommodation__page">
       <Header />
