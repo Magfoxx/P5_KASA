@@ -1,16 +1,18 @@
-import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Error404 from '../components/Error404';
+import React from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Error404 from "../components/Error404";
 
 function NoPage() {
   return (
-    <div className='no-page'>
+    <div className="no-page">
       <Header />
-      <Error404 />
+      <main>
+        <Error404 />
+      </main>
       <Footer />
     </div>
   );
-};
+}
 
 export default NoPage;

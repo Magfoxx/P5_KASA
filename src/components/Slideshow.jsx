@@ -41,11 +41,11 @@ const SlideShow = ({ pictures }) => {
         </img>
       )}
       <div className="carousel__pagination">
-        {currentIndex + 1}/{pictures.length}
+        {currentIndex + 1} / {pictures.length}
       </div>
     </div>
   );
-};
+ };
 
 
 export default SlideShow;

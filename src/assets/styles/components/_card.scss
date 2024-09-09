@@ -9,6 +9,12 @@
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.05);
+  }
 
   &__image {
     width: 100%;
@@ -16,6 +22,7 @@
     object-fit: cover;
     aspect-ratio: 16/9;
   }
+
 
   &::before {
     content: '';
